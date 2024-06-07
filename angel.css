@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',serif;
+    box-sizing: border-box ;
+}
+html{
+    scroll-behavior: auto;
+}
+body{
+    background: #2b2727;
+    color: whitesmoke ;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/angel2.jpg);/*change images*/
+    background-size: cover;
+    background-position: center;
+}    
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px ;
+} 
+nav ul li a{
+    color: wheat;
+    text-decoration: none;
+    font-size: 18px  ;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width:  0%;
+    height: 3px;
+    background: fuchsia;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: fuchsia;
+}
+/*-----------ABOUT----------*/
+#about{
+    padding: 80px 0px;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1:hover img{
+    transform: scale(1.1);
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-tittle{
+     font-size: 60px;
+     font-weight: 600;
+}
+.tab-tittle{
+    display: flex;
+    margin: 20px 0 40px;
+    width: 50%;
+    justify-content: space-between;
+}
+.tab-tittle div::after {
+    content: '';
+    width:  0%;
+    height: 3px;
+    background: fuchsia;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s ;
+}
+.tab-tittle div:hover::after {
+    width: 100%;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+/* .tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff00ff;
+    position: absolute;
+    left:  0;
+    bottom: -8px;
+    transition: 0.5s; 
+}
+.tab-links.active-link:hover::after{
+    width: 50%;
+} */
+.tab-content{
+    list-style: none;
+    margin: 10px 0 ;
+}
+.tab-content ul li span  {
+    color: pink;
+    font-size: 14px;
+}
+.tab-content{
+    display: none;
+}
+
+.tab-content1{
+    display: none;
+    cursor: pointer;
+}
+
+.tab-content2{
+    display: none;
+    cursor: pointer;
+}
+
+.active-tab{
+    display: block;
+}
+
+.active-tab1{
+    display: block;
+}
+
+.active-tab2{
+    display: block;
+    cursor: pointer;
+}
+
+
+/*              SERVICES             */
+/* #services{
+    padding: 30px 0;
+    background-color: rgb(79, 75, 75);
+}
+button{
+    background-color: whitesmoke;
+}
+.services-list .list_inside_service{
+    display: flex;
+    flex-wrap: wrap;
+}
+.services-list div{
+     padding: 30px; 
+    font-size: 13px;
+     font-weight: 300; 
+    border-radius: 10px; 
+} 
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+} 
+.list_inside_service{
+    background-color: #f0f;
+    margin: 0 2px;
+    display: flex;
+    margin-right: 10px;
+}
+.list_inside_service img{
+    width: 100%;
+    flex-direction: column-reverse; 
+}
+ button{ 
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: peru;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+ }  */
+/* -----------------protfolio----------------- */
+#portfolio{
+    background-color: rgb(80, 80, 97);
+    padding: 50px 0;
+}
+.worklist{
+    /* display: flex;
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+} 
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    position: absolute; 
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#f0f);
+    border-radius: 10px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #f0f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: whitesmoke;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%; /* you can remove it*/
+}
+.bbn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #f0f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: beige;
+    transition: background 0.5s;
+}
+.bbn:hover{
+    background: #f0f;
+}
+/* ------------CONTACT------------- */
+#contact{
+    background-color: rgb(135, 148, 159);
+}
+.contactleft{
+    flex-basis: 35%;
+}
+.contactright{
+    flex-basis: 60%;
+}
+.contactleft p{
+    margin-top: 30px;
+}
+.contactleft p i{
+    color: brown;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icon{
+    margin-top: 30px;
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    color: wheat;
+    transition: tranform 0.5s;
+}
+.social-icon a:hover{
+    color: #f0f;
+    transform: translateY(-5px);
+}
+.bbn.bbn2{
+    display: inline-block;
+    /* color: #f0f; */
+    
+}
+.contactright form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: black;
+    padding: 15px;
+    margin: 15px 0;
+    color: wheat;
+    font-size: 16px;
+    border-radius: 6px;
+}
+.contactright button{
+    background-color: #f0f;
+}
+form bbn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* -----------COPYRIGHT------------ */
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #5a5555;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #f0f;
+}
+/* --------------CSS FOR small SCREEN---------------- */
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/angel1.jpg); /* you need a phone back ground image */
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 18px; 
+        /* margin: 0 20px; text issue */
+        /* margin-bottom: 100%; */
+    }
+    .header-text h1{
+        font-size: 30px;
+        /* margin-bottom: 100%; */
+        margin-top: 20px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #f0f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-tittle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 40px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .contactleft, .contactright{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+

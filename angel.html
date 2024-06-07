@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel's website</title>
+    <link rel="stylesheet" href="angel.css">
+    <script src="https://kit.fontawesome.com/2be4c182c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+           <nav>
+            <!--change images, make a logo for your self -->
+            <img src="images/logo.jpg" class="logo">
+            <ul id="sidemenu"> 
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+           </nav>
+           <div class="header-text">
+               <p>Data scientist | frontend developer </p>
+               <h1>Hi, I'm <span>Angel</span><br> Sunday  Osim</h1>
+           </div>
+        </div>
+    </div>
+<!-------------- ABOUT -------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/angel1.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Molestias tempore quibusdam alias, iusto ipsa id animi 
+                        reprehenderit ipsum itaque ad, ratione modi soluta 
+                        nostrum obcaecati, explicabo voluptate quod repellat 
+                        architecto!</p>
+                        <div class="tab-tittle">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab1('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab2('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Frontend</span><br>Building website</li>
+                                <li><span>Mavhine Learning</span><br>Deep Learning</li>
+                                <li><span>Artificial Intellegence</span><br>Data scientist</li> 
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2022</span><br>Internship; Silcon blast</li>
+                            </ul>
+                        </div>    
+                        <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>Frontend</span><br>Building website</li>
+                                    <li><span>Mavhine Learning</span><br>Deep Learning</li>
+                                    <li><span>Artificial Intellegence</span><br>Data scientist</li> 
+                                </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--------------SERVICES------------------>  
+<!-- <div id="services">
+    <div class="container">
+        <h1 class="sub-tittle">My Services</h1>
+        <div class="services-list">
+            <div class="list_inside_service">
+
+                <div class="1st">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h2>My Projects</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    excepturi in tempore dolor quo sit esse recusandae?</p>
+                    <button><a href="#">Learn more...</a></button>
+                </div>
+
+                <div class="2nd">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <h2>My Article</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    excepturi in tempore dolor quo sit esse recusandae?</p>
+                    <button><a href="#">Learn more...</a></button>
+                </div>
+                <div class="3rd">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Designs</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing <br>
+                    excepturi in tempore dolor quo sit esse recusandae?</p>
+                    <button><a href="#">Learn more...</a></button>
+                </div>
+                
+             
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- --------------------portfolio------------------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-tittle">My Services</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/imaging.webp" >
+                <div class="layer">
+                    <h3>Web Designs</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipi elit.
+                        Dolores hic harum vero quod dolorem odio possimus 
+                        accusantium deleniti laboriosam!</p>
+                        <a href="#"><i class="fas fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/imaging.webp" >
+                <div class="layer">
+                    <h3>My Article</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipi elit.
+                        Dolores hic harum vero quod dolorem odio possimus 
+                        accusantium deleniti laboriosam!</p>
+                        <a href="#"><i class="fas fa-medium"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/imaging.webp">
+                <div class="layer">
+                    <h3>My Projects</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipi elit.
+                        Dolores hic harum vero quod dolorem odio possimus 
+                        accusantium deleniti laboriosam!</p>
+                        <a href="#"><i class="fas fa-github"></i></a>
+                </div> 
+            </div>
+        </div>
+        <a href="#" class="bbn">See more...</a> 
+        <!-- linkin page link above -->
+    </div>
+</div>
+<!-- --------------------CONTACT----------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contactleft">
+                <h1 class="sub-tittle" >Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane-top"></i>Angelosim20@gmail.com</p>
+                <p><i class="fa-duotone fa-phone"></i>+234-7015253697</p>
+                <div class="social-icon">
+                    <a href="https://Twitter.com/otomobhazi "><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://instagram.com/otomobhazi "><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/angel-osim-a97637199/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://medium.com/@angelosim20"><i class="fa-brands fa-medium"></i></a>
+                    <a href="https://github.com/Otom-obhazi"><i  class="fa-brands fa-github"></i></a>
+                    <!-- <a href="https://www.youtube.com/user/Angelosim "><i class="fa-brands fa-youtube"></i></a> -->
+                </div>
+                <a href="inthenameofCV/Coursera 87GQQL9JC4F6.pdf" class="bbn bbn2">Download Resume</a>
+            </div>
+            <div class="contactright">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="bbn bbn2" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright"> CopyRight © Aurum. made with <i class="fa-solid fa-heart"></i></div>
+</div>
+
+
+
+
+
+<!-- <i class="fa-solid fa-download"></i> download -->
+<!--java script below.-->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-link");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+           }
+ 
+
+    // var tabcontent = document.querySelector(".tab-content");
+    // var tabcontent1 = document.querySelector(".tab-content1");
+    // var tabcontent2 = document.querySelector(".tab-content2");
+
+    // function opentab(tabname){
+    //     for(tablink of tablinks){
+    //         tablink.classList.remove("active-link");
+    //     }
+    //     for(tabcontents of tabcontent){
+    //         tabcontents.classList.remove("active-tab");
+    //     }
+    //     event.currentTarget.classList.add("active-link");
+    //     document.getElementById(tabname).classList.add("active-tab");
+    // }
+
+    //     function opentab(){
+    //         tabcontent.classList.toggle("active-tab");
+    //         console.log("click")
+    //     }
+
+    //     function opentab1(){
+    //         tabcontent1.classList.toggle("active-tab1");
+    //         onclick="opentab()"
+    //     }
+
+    //     function opentab2(){
+    //         tabcontent2.classList.toggle("active-tab2");
+    //     }
+
+    // </script>
+    // <script>
+    //     var sidemenu = document.getElementById("sidemenu")
+
+    //     function openmenu(){
+    //        sidemenu.style.right = "0";
+    //     }
+
+    //     function closemenu(){
+    //        sidemenu.style.right = "-200px";
+        // }
+    </script>
+
+</body> 
+
+</html>  
